@@ -69,9 +69,17 @@
             align-items: flex-start;
             margin-bottom: 2em;
         }
-        .pub-teaser {
+        /* .pub-teaser {
             width: 160px;
             height: auto;
+            margin-right: 20px;
+            flex-shrink: 0;
+            border: 1px solid #ddd;
+        } */
+        .pub-teaser {
+            width: 160px;       /* desired width */
+            height: 100px;      /* desired height */
+            display: block;     /* avoids inline spacing issues */
             margin-right: 20px;
             flex-shrink: 0;
             border: 1px solid #ddd;
