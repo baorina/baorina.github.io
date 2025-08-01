@@ -9,16 +9,17 @@
             font-family: sans-serif;
             line-height: 1.6;
             margin: 20px;
+            color: #333;
         }
         .container {
             max-width: 900px;
             margin: auto;
         }
         h1, h2, h3 {
-            color: #333;
+            color: #2c3e50;
         }
         a {
-            color: #007bff;
+            color: #3498db;
             text-decoration: none;
         }
         a:hover {
@@ -28,19 +29,23 @@
             margin-bottom: 2em;
         }
         .section h2 {
-            border-bottom: 2px solid #eee;
+            border-bottom: 2px solid #ecf0f1;
             padding-bottom: 10px;
         }
-        .pub-list, .grant-list, .activity-list, .award-list, .teaching-list, .advising-list {
-            list-style-type: none;
-            padding-left: 0;
-        }
-        .pub-list li, .grant-list li, .activity-list li, .award-list li, .teaching-list li, .advising-list li {
-            margin-bottom: 1em;
-        }
         .header {
-            text-align: center;
+            display: flex;
+            align-items: center;
             margin-bottom: 2em;
+            flex-wrap: wrap;
+        }
+        .header-photo {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            margin-right: 20px;
+        }
+        .header-info {
+            flex-grow: 1;
         }
         .header h1 {
             margin-bottom: 0.2em;
@@ -48,14 +53,50 @@
         .header p {
             margin: 0;
         }
+        .grant-list, .activity-list, .award-list, .teaching-list, .advising-list {
+            list-style-type: none;
+            padding-left: 0;
+        }
+        .grant-list li, .activity-list li, .award-list li, .teaching-list li, .advising-list li {
+            margin-bottom: 1em;
+        }
+        .pub-list {
+            list-style-type: none;
+            padding-left: 0;
+        }
+        .pub-list li {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 2em;
+        }
+        .pub-teaser {
+            width: 160px;
+            height: auto;
+            margin-right: 20px;
+            flex-shrink: 0;
+            border: 1px solid #ddd;
+        }
+        .pub-info {
+            flex-grow: 1;
+        }
+        .pub-links {
+            margin-top: 8px;
+            font-weight: bold;
+        }
+        .pub-links a {
+            margin-right: 15px;
+        }
     </style>
 </head>
 <body>
     <div class="container">
         <div class="header">
-            <h1>Rina Bao</h1>
-            <p>rina.bao@childrens.harvard.edu | <a href="https://scholar.google.com/citations?user=iDbLKFMAAAAJ&hl=zh-CN">Google Scholar</a></p>
-            <p>Landmark Center, 401 Park Drive, Boston, MA 02115, USA</p>
+            <img src="https://scholar.googleusercontent.com/citations?view_op=medium_photo&user=iDbLKFMAAAAJ&citpid=6" alt="Rina Bao" class="header-photo">
+            <div class="header-info">
+                <h1>Rina Bao</h1>
+                <p>rina.bao@childrens.harvard.edu | <a href="https://scholar.google.com/citations?user=iDbLKFMAAAAJ&hl=zh-CN">Google Scholar</a></p>
+                <p>Landmark Center, 401 Park Drive, Boston, MA 02115, USA</p>
+            </div>
         </div>
 
         <div class="section">
@@ -69,18 +110,108 @@
 
         <div class="section">
             <h2>Summarization</h2>
-            <p>I am a postdoctoral researcher at Harvard Medical School and Boston Children's Hospital. My research integrates brain MRI and clinical data to develop AI solutions for early diagnosis and prognosis, with a focus on <strong>multimodal learning, clinically grounded AI systems, and foundation models for medical reasoning</strong>. I spearheaded the Boston Neonatal Brain Injury Dataset for Hypoxic Ischemic Encephalopathy (BONBID-HIE) Challenges and Workshops at MICCAI 2023–2024, establishing neonatal brain injury benchmarks that attracted <strong>300+</strong> participants and generated over <strong>2,000</strong> dataset downloads from <strong>more than 15 countries across six continents, including North and South America, Europe, Asia, Africa, and Australia</strong>. I have published in leading venues such as ICML, MICCAI, ISBI, Scientific Data, Medical Image Analysis, IEEE Journal of Selected Topics in Signal Processing, and npj Computational Materials, and I have received the Thrasher Research Fund Early Career Award. My long-term goal is to advance trustworthy, clinically integrated AI systems that transform pediatric healthcare and beyond.</p>
+            <p>I am a postdoctoral researcher at Harvard Medical School and Boston Children's Hospital. My research integrates brain MRI and clinical data to develop AI solutions for early diagnosis and prognosis, with a focus on <strong>multimodal learning, clinically grounded AI systems, and foundation models for medical reasoning</strong>. I spearheaded the Boston Neonatal Brain Injury Dataset for Hypoxic Ischemic Encephalopathy (BONBID-HIE) Challenges and Workshops at MICCAI 2023–2024, establishing neonatal brain injury benchmarks that attracted <strong>300+</strong> participants and generated over <strong>2,000</strong> dataset downloads from more than 15 countries across six continents, including North and South America, Europe, Asia, Africa, and Australia. I have published in leading venues such as ICML, MICCAI, ISBI, Scientific Data, Medical Image Analysis, IEEE Journal of Selected Topics in Signal Processing, and npj Computational Materials, and I have received the Thrasher Research Fund Early Career Award. My long-term goal is to advance trustworthy, clinically integrated AI systems that transform pediatric healthcare and beyond.</p>
         </div>
 
         <div class="section">
             <h2>Research Grants Awarded and Applications</h2>
             <ul class="grant-list">
                 <li>Thrasher Research Fund Early Career Awards (PI: Rina Bao, <a href="https://www.thrasherresearch.org/grant/02402?lang=eng">``Development of neuroimaging biomarkers for 2-year neurocognitive outcomes in mild neonatal brain injury"</a>)</li>
-                <li>Charles A. King Trust Postdoctoral Research Fellowship, Resubmission for the 2025 March Circle (Under review, PI: Rina Bao)</li>
-                <li>NIH K99/R00, Resubmission for the 2025 March Circle (Under review, PI: Rina Bao)</li>
             </ul>
         </div>
+        
+        <div class="section">
+            <h2>Publication and Preprints</h2>
+            <h3>Publications</h3>
+            <ul class="pub-list">
+                <li>
+                    <img src="https://via.placeholder.com/160x100.png?text=Teaser" alt="Publication Teaser" class="pub-teaser">
+                    <div class="pub-info">
+                        <strong>Bao, R.</strong>, et al. ``Visual and Domain Knowledge for Professional-level Graph-of-Thought Medical Reasoning" <em>International Conference on Machine Learning (<strong>ICML</strong>)</em>, 2025, <strong>Spotlight</strong> (Rate <strong>2.6%</strong>)
+                        <div class="pub-links">
+                            <a href="#">[Paper]</a><a href="#">[Code]</a>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <img src="https://via.placeholder.com/160x100.png?text=Teaser" alt="Publication Teaser" class="pub-teaser">
+                    <div class="pub-info">
+                        <strong>Bao, R.</strong>, et al. ``BOston Neonatal Brain Injury Data for Hypoxic Ischemic Encephalopathy (BONBID-HIE): I. MRI and Lesion Labeling", <em><strong>Scientific Data</strong> 12.1 (2025): 53.</em> (<strong>Impact Factor: 8.7, Q1</strong>)
+                        <div class="pub-links">
+                            <a href="#">[Paper]</a><a href="#">[Code]</a>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <img src="https://via.placeholder.com/160x100.png?text=Teaser" alt="Publication Teaser" class="pub-teaser">
+                    <div class="pub-info">
+                        <strong>Bao, R.</strong>, et al. ``PARADISE: Personalized and regional adaptation for HIE disease identification and segmentation", <em><strong>Medical Image Analysis</strong></em>, Volume 102, 2025, 103419, <a href="https://doi.org/10.1016/j.media.2024.103419">https://doi.org/10.1016/j.media.2024.103419</a> (<strong>Impact Factor: 11.8, Q1</strong>).
+                        <div class="pub-links">
+                            <a href="#">[Paper]</a><a href="#">[Code]</a>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <img src="https://via.placeholder.com/160x100.png?text=Teaser" alt="Publication Teaser" class="pub-teaser">
+                    <div class="pub-info">
+                         <strong>Bao, R.</strong>, et al. ``BONBID-HIE 2023: Lesion Segmentation Challenge in BOston Neonatal Brain Injury Data for Hypoxic Ischemic Encephalopathy", <em>Minor revision in IEEE Transactions on Medical Imaging (<strong>IEEE TMI</strong>)</em> (<strong>Impact Factor: 9.8, Q1</strong>)
+                        <div class="pub-links">
+                            <a href="#">[Paper]</a><a href="#">[Code]</a>
+                        </div>
+                    </div>
+                </li>
+                 <li>
+                    <img src="https://via.placeholder.com/160x100.png?text=Teaser" alt="Publication Teaser" class="pub-teaser">
+                    <div class="pub-info">
+                         Hajilounezhad, T.*, <strong>Bao R.*</strong>, et al. ``Predicting carbon nanotube forest attributes and mechanical properties using simulated images and deep learning", <em><strong>Npj Computational Materials</strong> 7 (1), 134</em> (* equal contribution) (<strong>Impact Factor: 13.0, Q1, Nature Portfolio</strong>)
+                        <div class="pub-links">
+                            <a href="#">[Paper]</a><a href="#">[Code]</a>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <img src="https://via.placeholder.com/160x100.png?text=Teaser" alt="Publication Teaser" class="pub-teaser">
+                    <div class="pub-info">
+                        <strong>Bao, R.</strong>, et al.``Lightweight SDE-Net Fusing Model-Based and Learned Features for Computational Histopathology", <em>IEEE Journal of Selected Topics in Signal Processing (<strong>IEEE JSTSP</strong>)</em>, vol. 18, no. 6, pp. 1123-1137, Sept. 2024, doi: 10.1109/JSTSP.2024.3470312. (<strong>Impact Factor: 13.7, Q1</strong>)
+                        <div class="pub-links">
+                            <a href="#">[Paper]</a><a href="#">[Code]</a>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <img src="https://via.placeholder.com/160x100.png?text=Teaser" alt="Publication Teaser" class="pub-teaser">
+                    <div class="pub-info">
+                        Rao, A., ..., <strong>Bao, R.</strong><sup>†</sup>, ``Spatial Prior-Guided Boundary and Region-Aware 2D Lesion Segmentation in Neonatal Hypoxic Ischemic Encephalopathy", <em><strong>MICCAI</strong></em>, 2025 (<sup>†</sup> Corresponding Author)
+                        <div class="pub-links">
+                            <a href="#">[Paper]</a><a href="#">[Code]</a>
+                        </div>
+                    </div>
+                </li>
+            </ul>
 
+            <h3>Peer-Reviewed Conference Abstracts</h3>
+            <ul class="pub-list">
+                <li>
+                    <img src="https://via.placeholder.com/160x100.png?text=Teaser" alt="Publication Teaser" class="pub-teaser">
+                    <div class="pub-info">
+                        Ou, Y., Kesri, A., <strong>Bao, R.</strong>, et al. ``Combining 47 clinical and neuroimaging variables to predict adverse 18-22-month outcomes for Hypoxic Ischemic Encephalopathy in Neonatal Research Network trials", Pediatric Academic Societies Meeting (<strong>PAS</strong>) 2025
+                        <div class="pub-links">
+                            <a href="#">[Paper]</a><a href="#">[Code]</a>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <img src="https://via.placeholder.com/160x100.png?text=Teaser" alt="Publication Teaser" class="pub-teaser">
+                    <div class="pub-info">
+                        Kesri, A., <strong>Bao, R.</strong>, et al. ``The role of expert MRI scores in predicting adverse 18-22-month outcomes for Hypoxic Ischemic Encephalopathy in Neonatal Research Network trials", Annual Meeting of American Society of Pediatric Neuroradiology (<strong>ASPNR</strong>) 2025
+                        <div class="pub-links">
+                            <a href="#">[Paper]</a><a href="#">[Code]</a>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        
         <div class="section">
             <h2>Professional Activities</h2>
             <ul class="activity-list">
@@ -88,36 +219,6 @@
                 <li><strong>Bao, R.</strong>, et al. <strong>Book Chapter</strong> ``Linking Deep Learning, MRI to Brain Disorders" in ``Handbook of the Biology and Pathology of Mental Disorders" In: Martin, C.R., Preedy, V.R., Patel, V.B., Rajendram, R. (eds) Handbook of the Biology and Pathology of Mental Disorders. Springer, Cham. <a href="https://doi.org/10.1007/978-3-031-32035-4_55-1">https://doi.org/10.1007/978-3-031-32035-4_55-1</a></li>
                 <li><strong>Organizer</strong> for the Challenges and Workshops of <a href="https://bonbid-hie2023.grand-challenge.org/">1st</a> and <a href="https://bonbid-hie2024.grand-challenge.org/">2nd BONBID-HIE for HIE Lesion Segmentation and Outcome Prediction</a> in conjunction with the International Medical Image Computing and Computer Assisted Intervention Conference (MICCAI) 2023 and MICCAI 2024, engaging over 300 participants worldwide.</li>
                 <li>Reviewers for CVPR, MICCAI, Frontiers in Neuroscience, Scientific Reports, Pattern Recognition, IEEE Transactions on Biomedical Engineering, IEEE Transactions on Neural Networks and Learning Systems, and others.</li>
-            </ul>
-        </div>
-
-        <div class="section">
-            <h2>Publication and Preprints</h2>
-            <h3>Publications</h3>
-            <ul class="pub-list">
-                <li><strong>Bao, R.</strong>, et al. ``Visual and Domain Knowledge for Professional-level Graph-of-Thought Medical Reasoning" <em>International Conference on Machine Learning (<strong>ICML</strong>)</em>, 2025, <strong>Spotlight</strong> (Rate <strong>2.6%</strong>)</li>
-                <li><strong>Bao, R.</strong>, et al. ``BOston Neonatal Brain Injury Data for Hypoxic Ischemic Encephalopathy (BONBID-HIE): I. MRI and Lesion Labeling", <em><strong>Scientific Data</strong> 12.1 (2025): 53.</em> (<strong>Impact Factor: 8.7, Q1</strong>)</li>
-                <li><strong>Bao, R.</strong>, et al. ``PARADISE: Personalized and regional adaptation for HIE disease identification and segmentation", <em><strong>Medical Image Analysis</strong></em>, Volume 102, 2025, 103419, <a href="https://doi.org/10.1016/j.media.2024.103419">https://doi.org/10.1016/j.media.2024.103419</a> (<strong>Impact Factor: 11.8, Q1</strong>).</li>
-                <li><strong>Bao, R.</strong>, et al. ``BONBID-HIE 2023: Lesion Segmentation Challenge in BOston Neonatal Brain Injury Data for Hypoxic Ischemic Encephalopathy", <em>Minor revision in IEEE Transactions on Medical Imaging (<strong>IEEE TMI</strong>)</em> (<strong>Impact Factor: 9.8, Q1</strong>)</li>
-                <li>Hajilounezhad, T.*, <strong>Bao R.*</strong>, et al. ``Predicting carbon nanotube forest attributes and mechanical properties using simulated images and deep learning", <em><strong>Npj Computational Materials</strong> 7 (1), 134</em> (* equal contribution) (<strong>Impact Factor: 13.0, Q1, Nature Portfolio</strong>)</li>
-                <li><strong>Bao, R.</strong>, et al.``Lightweight SDE-Net Fusing Model-Based and Learned Features for Computational Histopathology", <em>IEEE Journal of Selected Topics in Signal Processing (<strong>IEEE JSTSP</strong>)</em>, vol. 18, no. 6, pp. 1123-1137, Sept. 2024, doi: 10.1109/JSTSP.2024.3470312. (<strong>Impact Factor: 13.7, Q1</strong>)</li>
-                <li>Rao, A., ..., <strong>Bao, R.</strong><sup>†</sup>, ``Spatial Prior-Guided Boundary and Region-Aware 2D Lesion Segmentation in Neonatal Hypoxic Ischemic Encephalopathy", <em><strong>MICCAI</strong></em>, 2025 (<sup>†</sup> Corresponding Author)</li>
-                <li><strong>Bao, R.</strong>, et al. ``AGE2HIE: Transfer Learning from Brain Age to Predicting Neurocognitive Outcome for Infant Brain Injury", <em>Int. Symp. Biomed. Imaging (<strong>ISBI</strong>)</em>, pp. 1-5, doi: 10.1109/ISBI60581.2025.10980747.</li>
-                <li><strong>Bao, R.</strong>, et al. ``GLSNet++: Global and Local-Stream Feature Fusion for LiDAR Point Cloud Semantic Segmentation Using GNN Demixing Block", <em><strong>IEEE Sensors Journal</strong></em>, vol. 24, no. 7, pp. 11610-11624, 2024. (<strong>Impact Factor: 4.7</strong>)</li>
-                <li><strong>Bao, R.</strong>, et al. ``DMNet: Dual-stream marker guided deep network for dense cell segmentation and lineage tracking", <em>Int. Conf. on Computer Vision <strong>(ICCV)</strong> Computer Vision for Automated Medical Diagnosis (CVAMD) Workshops</em>, 2021, pp. 3361-3370. (<strong>Oral, Best Paper</strong>)</li>
-                <li>He, S., <strong>Bao, R.</strong>, et al. ``Relation U-Net", <em>Int. Symp. Biomed. Imaging (<strong>ISBI</strong>)</em>, 2025, pp. 1-4, doi: 10.1109/ISBI60581.2025.10980668.</li>
-                <li>Maska M, Ulman V, Delgado-Rodriguez P, ... , <strong>Bao, R.</strong>, ... , et al. ``The Cell Tracking Challenge: 10 years of objective benchmarking[J]", <em><strong>Nature Methods</strong></em>, 2023: 1-11. PMCID: PMC10333123. (<strong>Impact Factor: 51.7, Q1, Nature Portfolio</strong>)</li>
-                <li>Hsiao, H., ..., <strong>Bao, R.</strong>, et al. ``Data Harmonization Framework for Neonatal Hypoxic-Ischemic Encephalopathy Studies", Journal of the American Medical Informatics Association Open (<em><strong>JAMIA Open</strong></em>), 2025 (<strong>Impact Factor: 3.2</strong>)</li>
-                <li>Li, J., He, S., <strong>Bao, R.</strong>, et al. ``Using Off-Target-Disease Data to Improve Target-Disease Lesion Segmentation", <em>Int. Symp. Biomed. Imaging (<strong>ISBI</strong>)</em>, 2025, pp. 1-4, doi: 10.1109/ISBI60581.2025.10981230</li>
-                <li><strong>Bao, R.</strong>, et al. ``GLSNet: Global and local streams network for 3D point cloud classification", <em>IEEE Applied Imagery Pattern Recognition Workshop</em>, 2019: 1-9. (<strong>Oral</strong>)</li>
-            </ul>
-             <h3>Peer-Reviewed Conference Abstracts</h3>
-            <ul class="pub-list">
-                <li>Ou, Y., Kesri, A., <strong>Bao, R.</strong>, et al. ``Combining 47 clinical and neuroimaging variables to predict adverse 18-22-month outcomes for Hypoxic Ischemic Encephalopathy in Neonatal Research Network trials", Pediatric Academic Societies Meeting (<strong>PAS</strong>) 2025</li>
-                <li>Kesri, A., <strong>Bao, R.</strong>, et al. ``The role of expert MRI scores in predicting adverse 18-22-month outcomes for Hypoxic Ischemic Encephalopathy in Neonatal Research Network trials", Annual Meeting of American Society of Pediatric Neuroradiology (<strong>ASPNR</strong>) 2025</li>
-                <li><strong>Bao, R.</strong>, et al. ``2-Year neurocognitive outcome prediction of Hypoxic Ischemic Encephalopathy in neonates with brain MRIs", The Society for Pediatric Radiology (<strong>SPR</strong>) Annual Meeting 2023</li>
-                <li><strong>Bao, R.</strong>, et al ``Maternal Dietary Nutrition Interact With Demographic and Socioeconomic Information To Impact Offspring Neurocognition by Early School Age", <strong>Nutrition</strong> 2023</li>
-                <li><strong>Bao, R.</strong>, et al. ``Clinical Data Predicting Neonatal and 2-year Outcome Following Hypoxic Ischemic Encephalopathy", Pediatric Academic Societies Meeting (<strong>PAS</strong>) 2023</li>
             </ul>
         </div>
 
@@ -145,7 +246,7 @@
                 <li><strong>Microchip Technology Scholarship</strong> - 2014</li>
                 <li><strong>Honorable Mention Award in International Mathematical Contest in Modeling</strong> - 2013</li>
                 <li><strong>Leading Individual of Technological Innovation Honor</strong> in Tianjin University - 2013</li>
-                <li><strong>First Prize (Top 1.06%) in China Undergraduate Mathematical Contest in Modeling</strong> (Top level national contest among all the undergraduate competitions) - 2012</li>
+                <li><strong>First Prize (Top 1.06%) in China Undergraduate Mathematical Contest in Modeling</strong> - 2012</li>
             </ul>
         </div>
 
